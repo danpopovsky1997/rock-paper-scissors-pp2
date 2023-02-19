@@ -31,6 +31,7 @@ body {
 }
 
 .restart-btn {
+    font-family: 'bebas neue', sans-serif;
     display: none;
     background-color: var(--light-color);
     color: #333;

@@ -7,9 +7,6 @@ const scoreboard = {
     player: 0,
     computer: 0
 };
-const winSound = document.getElementById("win-sound");
-const loseSound = document.getElementById("lose-sound");
-const drawSound = document.getElementById("draw-sound");
 
 // Play game
 function play(e) {
@@ -112,7 +109,6 @@ function clearModal(e) {
         modal.style.display = 'none';
     }
 }
-
 
 //Event listeners
 choices.forEach(choice => choice.addEventListener('click', play));
