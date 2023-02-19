@@ -7,6 +7,9 @@ const scoreboard = {
     player: 0,
     computer: 0
 };
+const winSound = document.getElementById("win-sound");
+const loseSound = document.getElementById("lose-sound");
+const drawSound = document.getElementById("draw-sound");
 
 // Play game
 function play(e) {
@@ -64,6 +67,7 @@ function showWinner(winner, computerChoice) {
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
         `;
+        document.getElementById("win-sound").play();
     } else if (winner === 'computer') {
         // Inc computer score
         scoreboard.computer++;
@@ -73,12 +77,14 @@ function showWinner(winner, computerChoice) {
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
         `;
+        document.getElementById("lose-sound").play();
     } else {
         result.innerHTML = `
         <h1>It's a Draw</h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}</strong></p>
         `;
+        document.getElementById("draw-sound").play();
     }
     // Show score 
     score.innerHTML = `
@@ -106,6 +112,7 @@ function clearModal(e) {
         modal.style.display = 'none';
     }
 }
+
 
 //Event listeners
 choices.forEach(choice => choice.addEventListener('click', play));

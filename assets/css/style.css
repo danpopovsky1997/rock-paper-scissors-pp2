@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
-    --primary-color: #003699;
+    --primary-color: #887f00;
     --dark-color: #333333;
     --light-color: #f4f4f4;
     --lose-color: #dc3545;
@@ -17,9 +17,10 @@
 body {
     font-family: 'bebas neue', sans-serif;
     line-height: 1.6;
-    background: #fff;
+    background: #ffee00;
     color:#333;
 }
+
 
 .container {
     max-width: 1100px;
