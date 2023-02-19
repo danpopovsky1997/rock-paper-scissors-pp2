@@ -94,8 +94,8 @@ function showWinner(winner, computerChoice) {
 
 // Restart Game
 function restartGame() {
-    scoreboard.player = 0; 
-    scoreboard.computer = 0; 
+    scoreboard.player = 0;
+    scoreboard.computer = 0;
     score.innerHTML = `
     <p>Player: 0</p>
     <p>Computer: 0</p>
@@ -105,7 +105,7 @@ function restartGame() {
 
 // Clear Modal
 function clearModal(e) {
-    if(e.target == modal) {
+    if (e.target == modal) {
         modal.style.display = 'none';
     }
 }
