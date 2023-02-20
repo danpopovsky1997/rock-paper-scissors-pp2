@@ -8,6 +8,9 @@ const scoreboard = {
     computer: 0
 };
 
+var audio = document.getElementById("bg-sound");
+audio.volume = 0.25;
+
 // Play game
 function play(e) {
     restart.style.display = 'inline-block';
